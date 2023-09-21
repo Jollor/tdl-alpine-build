@@ -1,5 +1,12 @@
 FROM node:20-alpine
 
+RUN apk add --update
+RUN apk add python3
+RUN apk add build-base
+RUN apk add libc6-compat
+RUN apk add yarn
+RUN yarn global add node-gyp
+
 WORKDIR /
 
 RUN apk add --no-cache \

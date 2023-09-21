@@ -1,9 +1,10 @@
 {
   "scripts": {
     "start": "docker-compose up",
-    "build": "docker-compose build"
+    "build": "docker-compose build",
+    "postinstall": "yarn --cwd node_modules/tdl run install --build-from-source"
   },
   "dependencies": {
-    "tdl": "^7.3.1"
+    "tdl": "7.3.2"
   }
 }
