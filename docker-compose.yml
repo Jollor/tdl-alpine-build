@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  telegram:
+    container_name: workers-telegram-tdl
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    volumes:
+      - workers-nodemodules:/var/apps/workers/node_modules
+      - .:/var/apps/workers
+    environment:
+      - NODE_ENV=development
+    working_dir: /var/apps/workers
+    command: sh -c "yarn && node index"
+
+volumes:
+  workers-nodemodules:

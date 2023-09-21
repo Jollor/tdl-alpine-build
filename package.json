@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "docker-compose up",
+    "build": "docker-compose build"
+  },
+  "dependencies": {
+    "tdl": "^7.3.1"
+  }
+}
